@@ -1,0 +1,57 @@
+
+body{
+    background: #333130;
+    margin: 0;
+  }
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+a{
+    color: inherit;
+    text-decoration: none;
+  }
+  .topNavBar{
+    padding: 19px 16px 19px 16px;
+  }
+  .topNavBar nav{
+    padding-top: 8px;
+    padding-bottom: 2px
+  }
+  .topNavBar .logo{
+      font-size: 26px;
+      font-family: "Segoe UI Black";
+      padding-top: 2px;
+      padding-bottom: 2px;
+  }
+  .topNavBar .logo .rs{
+      margin-right: 4px;
+      color: #E86767;
+  }
+  .topNavBar .logo .card{
+      color: #9A9DA2;
+  }
+  .topNavBar nav ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  .topNavBar nav ul>li{
+      float: left;
+      margin-left: 17px;
+      margin-right: 17px;
+  }
+  .topNavBar nav ul>li>a{
+      color: #B1B2B2;
+      font-weight: bold;
+      font-size:12px;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid transparent;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: block;
+  }
+  .topNavBar nav ul>li>a:hover{
+      border-bottom: 3px solid #E86767
+  }
