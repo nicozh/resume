@@ -78,12 +78,12 @@
                     </div>
             </div>
               <footer class="media">
-                <a href="https://github.com/nicozh">
+                <a href="https://github.com/nicozh " target="_blank">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-github"></use>
                         </svg>
                 </a>
-                <a href="https://nicozh.github.io/">
+                <a href="https://nicozh.github.io/" target="_blank">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-hexo"></use>
                         </svg>
@@ -98,7 +98,7 @@
                         <use xlink:href="#icon-bilibili"></use>
                         </svg>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/coroens" target="_blank">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-tuite_twitter"></use>
                         </svg>
@@ -110,79 +110,99 @@
           </a>
          </p>
           <p class="introduction">
-            张洪，前端工程师，熟练掌握HTML、JavaScript、Ajax、等WEB相关技术；<br>
+            你好！我叫张洪，前端工程师。熟练掌握HTML、JavaScript、Ajax、等WEB相关技术；<br>
             
             能熟练运用原生js，了解前端面向对象方式编程，了解前端js对象扩展方式和原理；<br>
             
             熟悉HTTP/Tcp协议，了解网站性能优化，技术体验优化；熟悉使用JSON；熟练使用<br>
-            jquery/Vue.js/bootstrap等流行框架；熟悉HTML5,DIV,CSS3,Javascript等静态页面技术
+            jquery/Vue.js/bootstrap等流行框架；熟悉HTML5,DIV,CSS3,Javascript等静态页面技术。
           
           </p>
     
         </main>
-        <section class="skills" >
+        <section class="skills" clearfix>
           <h2>技能</h2>
-          <ol clearfix>
+          <ol class="clearfix">
             <li>
               <h3>HTML 5 &amp; CSS 3</h3>
               <div class="ProgressBar">
-                <div class="Progress">
+                <div class="Progress" style="width: 80%;">
                 </div>
               </div>
             </li>
             <li>
                 <h3>JavaScript</h3>
                 <div class="ProgressBar">
-                  <div class="Progress">
+                  <div class="Progress" style="width: 76%;">
                   </div>
                 </div>
             </li>
             <li>
                 <h3>jQuery</h3>
                 <div class="ProgressBar">
-                  <div class="Progress">
+                  <div class="Progress" style="width: 53%;">
                   </div>
                 </div>
             </li>
             <li>
-                <h3>Vue</h3>
+                <h3>Vue.js</h3>
                 <div class="ProgressBar">
-                  <div class="Progress">
+                  <div class="Progress" style="width: 67%;">
                   </div>
                 </div>
             </li>
             <li>
-                <h3>React</h3>
+                <h3>React.js</h3>
                 <div class="ProgressBar">
-                  <div class="Progress">
+                  <div class="Progress" style="width: 58%;">
                   </div>
                 </div>
             </li>
             <li>
-                <h3>HTTP</h3>
+                <h3>node.js</h3>
                 <div class="ProgressBar">
-                  <div class="Progress">
+                  <div class="Progress" style="width: 58%;">
                   </div>
                 </div>
             </li>
           </ol>
         </section>
-        <section>
+        <section class="portfolio">
           <h2>作品集</h2>
           <nav>
-            <ol>
-              <li>所有</li>
-              <li>框架</li>
-              <li>原生JS&amp;CSS</li>
+            <ol class="clearfix">
+              <li id="all">所有</li>
+              <li id="framework">框架</li>
+              <li id="vallina">原生JS&amp;CSS</li>
             </ol>
+            <div id="portfolioBar" class="Bar state-1">
+              <div class="BarInner">
+
+              </div>
+            </div>
           </nav>
-    
-          <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+  <script>
+    all.onclick= function(){
+    portfolioBar.className = 'Bar state-1'
+  }
+  framework.onclick= function(){
+    portfolioBar.className = 'Bar state-2'
+  }
+  vallina.onclick= function(){
+    portfolioBar.className = 'Bar state-3'
+  }
+  </script> 
+          <div class="works">
+            <div class="big">
+              <img src="./img/photo-1.jpg" alt="作品1">
+            </div>
+            <div class="small-1">
+                <img src="./img/photo-2.jpg" alt="作品2">
+            </div>
+            <div class="small-2">
+                <img src="./img/photo-3.jpg" alt="作品3">
+            </div>
           </div>
-    
         </section>
       </body>
     </html>

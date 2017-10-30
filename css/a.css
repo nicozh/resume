@@ -141,7 +141,7 @@ a{
       line-height: 30px;
       padding: 5px 0;
       border-radius: 50%;
-      margin: 20px 20px;
+      margin: 20px 22px;
   }
   .MyCard .media a:hover{
       background: #D05C5C;
@@ -186,34 +186,118 @@ a{
   ul ,ol{
       list-style: none;
   }
-  section.skills{
+  section.skills,
+  section.portfolio{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 56px;
   }
-  section.skills>h2{
+  section.skills>h2,
+  section.portfolio>h2{
       text-align: center;
       color: #3D4451;
       font-size: 34px;
       font-weight: 600;
       line-height: 1.2;
+      margin-bottom: 30px;
+      margin-top: 76px;
   }
   section.skills>ol{
     background-color: #FFFFFF;
     box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);
+    padding: 40px 50px 8px;
   }
-  .skills>ol>li{
+  section.skills > ol > li{
       float: left;
-      width: 50%;
+      width: 48.3%;
+      box-sizing: border-box;
   }
-  section.skills .ProgressBar{
-      border: 1px solid red;
-      height: 3px;
+  section.skills > ol > li:nth-child(even){
+      float: right;
+  }
+  section.skills h3{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1.1;
+      padding-right: 40px;
+  }
+  section.skills .ProgressBar{         /*技能条*/
+      background-color: #FAE1E1;
+      height: 5px;
+      border-radius: 3px;
+      margin:4px 0 40px 0;
   }
   section.skills .ProgressBar .Progress{
-      background-color: green;
+      background-color: #E86767;
       height: 100%;
-      width: 50%;
+      border-radius: 3px  
   }
+  section.portfolio{
+      text-align: center;
+  }
+  section.portfolio>nav{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+  }
+  section.portfolio>nav>ol{
+    display: inline-block;
+    vertical-align: top;
 
+  }
+  section.portfolio>nav li{
+      float: left;
+      margin-left: 40px;     
+      cursor: pointer;
+  }
+  section.portfolio>nav li:nth-child(1){
+      margin-left: 0;
+  }
+  section.portfolio>nav .Bar{
+      
+      height: 5px;
+      margin-top: 14px;
+      margin-bottom: 28px;
+      border-radius: 2px;
+      background: #FFFFFF
+    }
+  section.portfolio>nav>.Bar>.BarInner{
+      height: 100%;
+      background: #E86767;
+      width: 10%;
+      border-radius: 2px;
+      transition: all 0.5s;
+  }
+  section.portfolio>nav>.Bar.state-1>.BarInner{
+      margin-left: 0;
+      width: 32px;
+  }
+  section.portfolio>nav>.Bar.state-2>.BarInner{
+    margin-left: 73px;
+    width: 32px;
+  }
+  section.portfolio>nav>.Bar.state-3>.BarInner{
+    margin-left: 144px;
+    width: 90px;
+  }
+  section.portfolio .works{
+      position: relative;
+      height: 597px;
+      margin-bottom: 50px;
+  }
+  section.portfolio .works>.big{
+      position: absolute; 
+      top: 0;
+      left: 10px;
+  }
+  section.portfolio .works>.small-1{
+      position: absolute;
+      top: 0;
+      left: 635px
+  }
+  section.portfolio .works>.small-2{
+      position: absolute;
+      top:312px;
+      left: 635px
+  }
