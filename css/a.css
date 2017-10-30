@@ -105,6 +105,11 @@ a{
   }
   .MyCard .picture{
       float: left;
+     
+  }
+  .MyCard .picture>img{
+      width: 299px;
+      height: 347px;
   }
   .MyCard .text{
       float: left;
