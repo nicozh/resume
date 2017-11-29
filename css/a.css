@@ -17,11 +17,20 @@ a{
     text-decoration: none;
   }
   .topNavBar{
-    padding: 19px 0 19px 0;
+    padding: 19px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    transition: 0.4s all;
+    color: #B1B2B2;
+  }
+  .topNavBar.sticky{
+      padding: 10px 0;
+      background: white;
+      z-index: 1;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+      color: black;
   }
   .topNavBar-inside{
       padding: 0 16px;
@@ -54,13 +63,12 @@ a{
       margin-right: 17px;
   }
   .topNavBar nav ul>li>a{
-      color: #B1B2B2;
+      color: inherit;
       font-weight: bold;
       font-size:12px;
       border-bottom: 3px solid transparent;
       border-top: 3px solid transparent;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding: 5px 0;
       display: block;
   }
   .topNavBar nav ul>li>a:hover{
@@ -170,10 +178,10 @@ a{
     line-height: 16px;
     font-weight: bold;
     padding: 21px 55px;
-    margin: 36px; auto;
+    margin: 36px auto;
   }
   main .downloadbox{
-    text-align:center
+    text-align: center
     }
   .downloadbutton:hover{
     transition: box-shadow 0.3s;
