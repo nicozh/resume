@@ -26,7 +26,7 @@
               <a class="logo" href="#" alt="logo" style="float:left;">
                   <span class="rs">RS</span><span class="card">card</span>
                </a>
-               <nav style="float:right;">
+               <nav class="menu" style="float:right;">
                  <ul class="clearfix">
                    <li>
                      <a href="#about">关于</a>
@@ -36,6 +36,11 @@
                    </li>
                    <li>
                      <a href="#portfolio">作品</a>
+                     <ul class="submenu">
+                       <li>作品1</li>
+                       <li>作品2</li>
+                       <li>作品3</li>
+                     </ul>
                    </li>
                    <li>
                      <a href="#boke">博客</a>
@@ -107,7 +112,7 @@
                 <a href="https://twitter.com/coroens" target="_blank">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-tuite_twitter"></use>
-                        </svg>
+                    </svg>
                 </a>
               </footer>
           </div>
@@ -184,22 +189,8 @@
               </div>
             </div>
           </nav>
-  <script>
-    all.onclick= function(){
-    portfolioBar.className = 'Bar state-1'
-  }
-  framework.onclick= function(){
-    portfolioBar.className = 'Bar state-2'
-  }
-  vallina.onclick= function(){
-    portfolioBar.className = 'Bar state-3'
-  }
-  </script> 
-  <script>
-    window.onscroll = function(xxxxx){
-    (window.scrollY > 0)?topNavBar.classList.add('sticky'):topNavBar.classList.remove('sticky')
-   }
-  </script>
+   <script src="./js/main.js"></script>
+  
     <div class="works">
       <div class="big">
         <img src="./img/photo-1.jpg" alt="作品1">
@@ -212,23 +203,5 @@
       </div>
     </div>
   </section>
-  <script>  
-    window.onload=function(){  
-      stressing.classList.remove('active')  
-    }  
-
-    let aTags = document.querySelectorAll('nav > ul > li > a')
-    console.log(aTags)
-    for(let i=0; i<aTags.length; i++){
-    aTags[i].onclick = function(x){
-    x.preventDefault()
-    let a = x.currentTarget
-    let href = a.getAttribute('href') //'#siteAbout'
-    let element = document.querySelector(href)
-    let top = element.offsetTop
-    window.scrollTo(0, top - 80)
-  }
-}
-       </script>
-      </body>
+  </body>
     </html>
