@@ -45,3 +45,12 @@ for(let i=0; i<liTags.length; i++){
     x.currentTarget.classList.remove('active')
   }
 }
+
+// document.onselectstart=function(){
+//   alert ("你想干哈")
+//   return false}
+// window.oncontextmenu = function () {
+//     alert("你点了右键")
+//     return false;
+   
+//  }
