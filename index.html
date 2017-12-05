@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人简历</title>
-    <link rel="stylesheet" href="css/loading.css">
+    <!-- <link rel="stylesheet" href="css/loading.css"> -->
+    <link rel="stylesheet" href="css/loading2.css">
     <link rel="stylesheet" href="css/a.css">
     <script src="//at.alicdn.com/t/font_453863_zxtv0n8fk8iwwmi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
@@ -19,54 +20,64 @@
       </style>
 </head>
 <body>
-    <div id="stressing" class="site-welcome active ">
-        <div class="loading"></div>
-      </div>
-        <div id="topNavBar" class="topNavBar">
-          <div class="topNavBar-inside  clearfix">
-              <a class="logo" href="#" alt="logo" style="float:left;">
-                  <span class="rs">RS</span><span class="card">card</span>
-               </a>
-               <nav class="menu" style="float:right;">
-                 <ul class="clearfix">
-                   <li>
-                     <a href="#about">关于</a>
-                   </li>
-                   <li
-                   ><a href="#skills">技能</a>
-                   </li>
-                   <li>
-                     <a href="#portfolio">作品</a>
-                     <ul class="submenu">
-                       <li>作品1</li>
-                       <hr>
-                       <li>作品2</li>
-                       <hr>
-                       <li>作品3</li>
-                       <hr>
-                     </ul>
-                   </li>
-                   <li>
-                     <a href="#boke">博客</a>
-                   </li>
-                   <li>
-                     <a href="#rili">日历</a>
-                   </li>
-                   <li>
-                     <a href="#telephone">联系方式</a>
-                   </li>
-                   <li>
-                     <a href="other#">其他</a>
-                   </li>
-                 </ul>
-               </nav>
+<!-- <div id="stressing" class="site-welcome active ">
+    <div class="loading"></div>
+  </div> -->
+
+<div id="load" class="loading active">
+    <div id="img1" class="img active">
+</div>
+<div id="img2" class="img active"></div>
+<div id="img3" class="img active"></div>
+<div id="img4" class="img active"></div>
+<div id="img5" class="img active"></div>
+  </div>
+
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inside  clearfix">
+        <a class="logo" href="#" alt="logo" style="float:left;">
+            <span class="rs">RS</span><span class="card">card</span>
+          </a>
+          <nav class="menu" style="float:right;">
+            <ul class="clearfix">
+              <li>
+                <a href="#about">关于</a>
+              </li>
+              <li
+              ><a href="#skills">技能</a>
+              </li>
+              <li>
+                <a href="#portfolio">作品</a>
+                <ul class="submenu">
+                  <li>作品1</li>
+                  <hr>
+                  <li>作品2</li>
+                  <hr>
+                  <li>作品3</li>
+                  <hr>
+                </ul>
+              </li>
+              <li>
+                <a href="blog">博客</a>
+              </li>
+              <li>
+                <a href="#rili">日历</a>
+              </li>
+              <li>
+                <a href="#telephone">联系方式</a>
+              </li>
+              <li>
+                <a href="other#">其他</a>
+              </li>
+            </ul>
+          </nav>
           </div>
         </div>
         <div class="banner">
           <div class="mask"></div>
         </div>
         <main>
-          <div id="about" class="MyCard">
+          <div data-x id="about" class="MyCard">
             <div class="pictureAndtext clearfix">
                 <div class="picture">
                     <img src="./img/photo.png" width:299 height:347 alt="头像">
@@ -128,11 +139,10 @@
             你好！我叫张洪，前端工程师。掌握HTML、JavaScript、Ajax、等WEB相关技术；<br>
             能熟练运用原生js，了解前端面向对象方式编程，熟悉HTTP/Tcp协议，熟悉使用JSON，<br>
             熟悉jquery/Vue.js/bootstrap等流行框架；熟悉HTML5,DIV,CSS3,Javascript等静态页面技术。
-          
           </p>
     
         </main>
-        <section id="skills" class="skills" clearfix>
+        <section data-x id="skills" class="skills" clearfix>
           <h2>技能</h2>
           <ol class="clearfix">
             <li>
@@ -179,7 +189,7 @@
             </li>
           </ol>
         </section>
-        <section id="portfolio" class="portfolio">
+        <section data-x id="portfolio" class="portfolio">
           <h2>作品集</h2>
           <nav>
             <ol class="clearfix">
