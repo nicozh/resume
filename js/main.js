@@ -49,7 +49,7 @@ all.onclick= function(){
   var stressing=document.getElementById('load')
    setTimeout(function(){  
    stressing.classList.remove('active')  
-  }  , 2000);
+  }  , 1000);
 
   //点击菜单定位
   let aTags = document.querySelectorAll('nav > ul > li > a')
@@ -60,8 +60,6 @@ all.onclick= function(){
   }
   requestAnimationFrame(animate);
 
-
-  console.log(aTags)
   for(let i=0; i<aTags.length; i++){
   aTags[i].onclick = function(x){
   x.preventDefault()                  //阻止默认动作

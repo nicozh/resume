@@ -251,7 +251,7 @@ transition: all 1s;
     line-height: 1.8;
   }
   ul ,ol{
-      list-style: none;
+    list-style: none;
   }
   section.skills,
   section.portfolio{
@@ -259,16 +259,16 @@ transition: all 1s;
     margin-left: auto;
     margin-right: auto;
     margin-top: 56px;
+    text-align: center;
   }
   section.skills>h2,
-  section.portfolio>h2{
-      text-align: center;
-      color: #3D4451;
-      font-size: 34px;
-      font-weight: 600;
-      line-height: 1.2;
-      margin-bottom: 30px;
-      margin-top: 76px;
+  section.portfolio>h2,section.message>h2{
+    color: #3D4451;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    margin-top: 76px;
   }
   section.skills>ol{
     background-color: #FFFFFF;
@@ -276,75 +276,70 @@ transition: all 1s;
     padding: 40px 50px 8px;
   }
   section.skills > ol > li{
-      float: left;
-      width: 48.3%;
-      box-sizing: border-box;
+    float: left;
+    width: 48.3%;
+    box-sizing: border-box;
   }
   section.skills > ol > li:nth-child(even){
-      float: right;
+    float: right;
   }
   section.skills h3{
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 1.1;
-      padding-right: 40px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
   }
   section.skills .ProgressBar{         /*技能条*/
-      background-color: #FAE1E1;
-      height: 5px;
-      border-radius: 3px;
-      margin:4px 0 40px 0;
-      overflow: hidden;
+    background-color: #FAE1E1;
+    height: 5px;
+    border-radius: 3px;
+    margin:4px 0 40px 0;
+    overflow: hidden;
   }
   section.skills .ProgressBar .Progress{
-      background-color: #E86767;
-      height: 100%;
-      border-radius: 3px  ;
-      transform: translateX(0); transition: all 1s; 
-  }
+    background-color: #E86767;
+    height: 100%;
+    border-radius: 3px  ;
+    transform: translateX(0); transition: all 1s; 
+}
   section.skills.offset .Progress{
     transform: translateX(-100%);
   }
 
-  section.portfolio{
-      text-align: center;
-  }
   section.portfolio>nav{
-      text-align: center;
-      display: inline-block;
-      vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
   }
   section.portfolio>nav>ol{
     display: inline-block;
     vertical-align: top;
-
   }
   section.portfolio>nav li{
-      float: left;
-      margin-left: 40px;     
-      cursor: pointer;
+    float: left;
+    margin-left: 40px;     
+    cursor: pointer;
   }
   section.portfolio>nav li:nth-child(1){
       margin-left: 0;
   }
   section.portfolio>nav .Bar{
-      
-      height: 5px;
-      margin-top: 14px;
-      margin-bottom: 28px;
-      border-radius: 2px;
-      background: #FFFFFF
+    height: 5px;
+    margin-top: 14px;
+    margin-bottom: 28px;
+    border-radius: 2px;
+    background: #FFFFFF
     }
   section.portfolio>nav>.Bar>.BarInner{
-      height: 100%;
-      background: #E86767;
-      width: 10%;
-      border-radius: 2px;
-      transition: all 0.5s;
+    height: 100%;
+    background: #E86767;
+    width: 10%;
+    border-radius: 2px;
+    transition: all 0.5s;
   }
   section.portfolio>nav>.Bar.state-1>.BarInner{
-      margin-left: 0;
-      width: 32px;
+    margin-left: 0;
+    width: 32px;
   }
   section.portfolio>nav>.Bar.state-2>.BarInner{
     margin-left: 73px;
@@ -355,22 +350,51 @@ transition: all 1s;
     width: 90px;
   }
   section.portfolio .works{
-      position: relative;
-      height: 597px;
-      margin-bottom: 50px;
+    position: relative;
+    height: 597px;
+    /* margin-bottom: 50px; */
   }
   section.portfolio .works>.big{
-      position: absolute; 
-      top: 0;
-      left: 10px;
+    position: absolute; 
+    top: 0;
+    left: 10px;
   }
   section.portfolio .works>.small-1{
-      position: absolute;
-      top: 0;
-      left: 635px
+    position: absolute;
+    top: 0;
+    left: 635px
   }
   section.portfolio .works>.small-2{
-      position: absolute;
-      top:312px;
-      left: 635px
+    position: absolute;
+    top:312px;
+    left: 635px
   }
+
+/* 留言板 */
+section.message{
+    max-width: 940px;
+    margin: 0 auto;
+}
+section.message>.list{
+    overflow: auto;
+    height: 400px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25)
+}
+section.message>h2{
+    text-align: center;
+}
+section.message>.list>ul>li{
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 20px 10px;
+    padding: 15px 10px;
+}
+section.message>form{
+    padding:5px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25)
+}
+section.message>form>input{
+    padding:10px 50px;
+    margin-left: 20px;
+}

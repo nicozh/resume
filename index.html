@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/a.css">
     <script src="//at.alicdn.com/t/font_453863_zxtv0n8fk8iwwmi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
     <style type="text/css">
       .icon {
       width: 1em; height: 1em;
@@ -61,7 +62,7 @@
                 <a href="blog">博客</a>
               </li>
               <li>
-                <a href="#rili">日历</a>
+                <a href="#message">留言板</a>
               </li>
               <li>
                 <a href="#telephone">联系方式</a>
@@ -203,7 +204,6 @@
               </div>
             </div>
           </nav>
-   <script src="./js/main.js"></script>
   
     <div class="works">
       <div class="big">
@@ -217,5 +217,21 @@
       </div>
     </div>
   </section>
-  </body>
-    </html>
+  <section data-x id="message" class="message">
+      <h2>留言板</h2>
+      <form action="" id="post">
+        <lable for="name">姓名</lable>
+        <input type="text" id="name">
+        <label for="content">内容</label>
+        <input type="text" id="content">
+        <input type="submit" value="提交">
+      </form>
+      <div class="list">
+        <ul></ul>
+      </div>
+  </section>
+<script src="./js/main.js"></script>
+<script src="./js/leancloud.js"></script>
+<div style="height:200px"></div>
+  </body> 
+</html>
