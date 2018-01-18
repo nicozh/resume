@@ -1,4 +1,6 @@
-//初始化
+
+!function(){
+  //初始化
 var APP_ID = 'KBnkJTwTszs2kPq0DbuU6ER7-gzGzoHsz';
 var APP_KEY = '0AKmSm6dNu8PbnWF9xtLYwWp';
 
@@ -8,38 +10,39 @@ AV.init({
 });
 
 //运行
-var TestObject = AV.Object.extend('TestObject');
-var testObject = new TestObject();
-var x=document.querySelector('#content')
-var p=document.querySelector('#post')
-var n=document.querySelector('#name')
-var li=document.querySelector('.list>ul')
+var message = AV.Object.extend('message');
+var message = new message();
+var x = document.querySelector('#content')
+var p = document.querySelector('#post')
+var n = document.querySelector('#name')
+var li = document.querySelector('.list>ul')
 
-p.addEventListener('submit',function(e){
-    e.preventDefault()
-    testObject.save({
-        name: n.value,
-        content: x.value,
-      }).then(function(object) {
-        alert('LeanCloud Rocks!');
-        let e=document.createElement('li')
-        e.textContent= `${object.attributes.name}: ${object.attributes.content}`
-        li.appendChild(e)
-      })
+p.addEventListener('submit', function (e) {
+  e.preventDefault()
+  message.save({
+    name: n.value,
+    content: x.value,
+  }).then(function (object) {
+    alert('留言成功');
+    let e = document.createElement('li')
+    e.textContent = `${object.attributes.name}: ${object.attributes.content}`
+    li.appendChild(e)
+  })
 })
 
-//获取数据
-var query = new AV.Query('TestObject');
+//获取数据并展示
+var query = new AV.Query('message');
 query.find().then(
-function (TestObject) {
-    let array = TestObject.map((item)=>item.attributes )
-    array.forEach((item)=>{
-    let e = document.createElement('li')
-    e.innerText = `${item.name}: ${item.content}`
-    li.appendChild(e)
+  function (message) {
+    let array = message.map((item) => item.attributes)
+    array.forEach((item) => {
+      let e = document.createElement('li')
+      e.innerText = `${item.name}: ${item.content}`
+      li.appendChild(e)
     })
-} 
+  }
 )
 
+}()
 
 
