@@ -348,24 +348,10 @@ transition: all 1s;
     width: 90px;
   }
   section.portfolio .works{
-    position: relative;
-    height: 597px;
+   
+    height: 430px;
+    background: #ccc
     /* margin-bottom: 50px; */
-  }
-  section.portfolio .works>.big{
-    position: absolute; 
-    top: 0;
-    left: 10px;
-  }
-  section.portfolio .works>.small-1{
-    position: absolute;
-    top: 0;
-    left: 635px
-  }
-  section.portfolio .works>.small-2{
-    position: absolute;
-    top:312px;
-    left: 635px
   }
 
 /* 留言板 */

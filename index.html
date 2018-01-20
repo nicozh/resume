@@ -9,7 +9,9 @@
   <!-- <link rel="stylesheet" href="css/loading.css"> -->
   <link rel="stylesheet" href="css/loading2.css">
   <link rel="stylesheet" href="css/a.css">
+  <link rel="stylesheet" href="./css/carousel.css">
   <script src="//at.alicdn.com/t/font_453863_zxtv0n8fk8iwwmi.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
   <script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
   <style type="text/css">
@@ -81,6 +83,7 @@
   <div class="banner">
     <div class="mask"></div>
   </div>
+  <!-- 个人信息 -->
   <main>
     <div data-x id="about" class="MyCard">
       <div class="pictureAndtext clearfix">
@@ -146,6 +149,7 @@
       <br> 熟悉jquery/Vue.js/bootstrap等流行框架；熟悉HTML5,DIV,CSS3,Javascript等静态页面技术。
     </p>
   </main>
+  <!-- 技能条 -->
   <section data-x id="skills" class="skills" clearfix>
     <h2>技能</h2>
     <ol class="clearfix">
@@ -193,32 +197,28 @@
       </li>
     </ol>
   </section>
+  <!-- 作品集 -->
   <section data-x id="portfolio" class="portfolio">
     <h2>作品集</h2>
     <nav>
-      <ol class="clearfix">
+      <ol class="tags clearfix">
         <li id="all">所有</li>
         <li id="framework">框架</li>
         <li id="vallina">原生JS&amp;CSS</li>
       </ol>
       <div id="portfolioBar" class="Bar state-1">
-        <div class="BarInner">
-
-        </div>
+        <div class="BarInner"></div>
       </div>
     </nav>
     <div class="works">
-      <div class="big">
-        <img src="./img/photo-1.jpg" alt="作品1">
-      </div>
-      <div class="small-1">
-        <img src="./img/photo-2.jpg" alt="作品2">
-      </div>
-      <div class="small-2">
-        <img src="./img/photo-3.jpg" alt="作品3">
-      </div>
+        <div id='images' class='images'>
+            <img src="./img/drawing.png" alt="">
+            <img src="./img/music.png" alt="">
+            <img src="./img/navigation.png" alt="">
+          </div>
     </div>
   </section>
+  <!-- 留言板 -->
   <section data-x id="message" class="message">
     <h2>留言板</h2>
     <form action="" id="post">
@@ -232,12 +232,13 @@
       <ul></ul>
     </div>
   </section>
+  <div style="height:200px"></div>
   <script src="./js/main.js"></script>
   <script src="./js/leancloud.js"></script>
   <script src="./js/Navigation-slide.js"></script>
   <script src="./js/slide-up.js"></script>
   <script src="./js/works-bar.js"></script>
-  <div style="height:200px"></div>
+  <script src="./js/carousel.js"></script>
 </body>
 
 </html>
