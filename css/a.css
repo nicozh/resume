@@ -348,9 +348,8 @@ transition: all 1s;
     width: 90px;
   }
   section.portfolio .works{
-   
     height: 430px;
-    background: #ccc
+    background: #ccc;
     /* margin-bottom: 50px; */
   }
 
