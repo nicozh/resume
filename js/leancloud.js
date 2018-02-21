@@ -10,8 +10,8 @@ AV.init({
 });
 
 //运行
-var message = AV.Object.extend('message');
-var message = new message();
+var Message = AV.Object.extend('message');
+var message = new Message();
 var x = document.querySelector('#content')
 var p = document.querySelector('#post')
 var n = document.querySelector('#name')

@@ -19,9 +19,10 @@
                 $(children[i]).on('click', (y) => {
                     var i = $(y.currentTarget).index()
                     var p = i * -940
-                    images.css({
-                        transform: 'translate(' + p + 'px)'
-                    })
+                    images.css(
+                        // transform: 'translate(' + p + 'px)'
+                        `margin-left`, `${p}`+`px`
+                    )
                     n = i
                 })
             }
