@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>个人简历</title>
   <!-- <link rel="stylesheet" href="css/loading.css"> -->
   <link rel="stylesheet" href="css/loading2.css">
   <link rel="stylesheet" href="css/a.css">
   <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width:420px)" )>
   <script src="//at.alicdn.com/t/font_453863_zxtv0n8fk8iwwmi.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
@@ -40,13 +41,13 @@
   </div>
 
   <div id="topNavBar" class="topNavBar">
-    <div class="topNavBar-inside  clearfix">
-      <a class="logo" href="#" alt="logo" style="float:left;">
-        <span class="rs">RS</span>
-        <span class="card">card</span>
+    <div class="topNavBar-inside">
+      <a class="logo" href="#" alt="logo">
+        <span class="rs">Zhang</span>
+        <span class="card">Hong</span>
       </a>
-      <nav class="menu" style="float:right;">
-        <ul class="clearfix">
+      <nav class="menu">
+        <ul>
           <li>
             <a href="#about">关于</a>
           </li>
@@ -65,16 +66,10 @@
             </ul>
           </li>
           <li>
-            <a href="blog">博客</a>
+            <a href="//gogoing.me">博客</a>
           </li>
           <li>
             <a href="#message">留言板</a>
-          </li>
-          <li>
-            <a href="#telephone">联系方式</a>
-          </li>
-          <li>
-            <a href="other#">其他</a>
           </li>
         </ul>
       </nav>
@@ -86,16 +81,18 @@
   <!-- 个人信息 -->
   <main>
     <div data-x id="about" class="MyCard">
-      <div class="pictureAndtext clearfix">
+      <div class="pictureAndtext ">
         <div class="picture">
           <img src="./img/photo.png" width:299 height:347 alt="头像">
         </div>
         <div class="text">
-          <span class="welcome">Hello
-            <span class="triangle"></span>
-          </span>
-          <h1>张 洪</h1>
-          <p>前端开发工程师</p>
+          <div class="r-info">
+            <span class="welcome">I'M
+              <span class="triangle"></span>
+            </span>
+            <h1>张 洪</h1>
+            <p>前端开发工程师</p>
+          </div>
           <hr>
           <dl>
             <dt>年龄</dt>
@@ -144,15 +141,13 @@
       </a>
     </p>
     <p class="introduction">
-      你好！我叫张洪，前端工程师。掌握HTML、JavaScript、Ajax、等WEB相关技术；
-      <br> 能熟练运用原生js，了解前端面向对象方式编程，熟悉HTTP/Tcp协议，熟悉使用JSON，
-      <br> 熟悉jquery/Vue.js/bootstrap等流行框架；熟悉HTML5,DIV,CSS3,Javascript等静态页面技术。
+      你好！我叫张洪，前端工程师。掌握HTML、JavaScript、Ajax、等WEB相关技术； 能熟练运用原生js，了解前端面向对象方式编程，熟悉HTTP/Tcp协议，熟悉使用JSON， 熟悉jquery/Vue.js/bootstrap等流行框架；熟悉HTML5,DIV,CSS3,Javascript等静态页面技术。
     </p>
   </main>
   <!-- 技能条 -->
   <section data-x id="skills" class="skills" clearfix>
     <h2>技能</h2>
-    <ol class="clearfix">
+    <ol>
       <li>
         <h3>HTML 5 &amp; CSS 3</h3>
         <div class="ProgressBar">
@@ -211,18 +206,18 @@
       </div>
     </nav>
     <div class="works">
-        <div id='images' class='images'>
-            <img src="./img/drawing.png" alt="">
-            <img src="./img/music.png" alt="">
-            <img src="./img/navigation.png" alt="">
-          </div>
+      <div id='images' class='images'>
+        <img src="./img/drawing.png" alt="">
+        <img src="./img/music.png" alt="">
+        <img src="./img/navigation.png" alt="">
+      </div>
     </div>
   </section>
   <!-- 留言板 -->
   <section data-x id="message" class="message">
     <h2>留言板</h2>
     <form action="" id="post">
-      <lable for="name" >姓名</lable>
+      <lable for="name">姓名</lable>
       <input type="text" placeholder="请输入姓名" id="name">
       <label for="content">内容</label>
       <input type="text" placeholder="请输入留言内容" id="content">

@@ -40,8 +40,13 @@
           x.preventDefault()                  //阻止默认动作
           let a = x.currentTarget
           let href = a.getAttribute('href')
-          let element = document.querySelector(href)
-          this.scrollTo(element)
+          if (href.indexOf('#') === 0) {
+            let element = document.querySelector(href)
+            this.scrollTo(element)
+          } else {
+            window.open(href)
+          }
+
         }
       }
     },

@@ -1,22 +1,25 @@
-
-body{
+body {
     background: #EFEFEF;
     margin: 0;
-  }
-.clearfix::after{
+}
+
+.clearfix::after {
     content: '';
     display: block;
     clear: both;
-  }
-  *{
-      margin: 0;
-      padding: 0
-  }
-a{
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+a {
     color: inherit;
     text-decoration: none;
-  }
-  .topNavBar{
+}
+
+.topNavBar {
     padding: 19px 0;
     position: fixed;
     top: 0;
@@ -24,95 +27,112 @@ a{
     width: 100%;
     transition: 0.4s all;
     color: #B1B2B2;
-  }
-  .topNavBar.sticky{
-      padding: 10px 0;
-      background: white;
-      z-index: 2;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
-      color: black;
-  }
-  .topNavBar-inside{
-      padding: 0 16px;
-  }
-  .topNavBar nav{
+}
+
+.topNavBar.sticky {
+    padding: 10px 0;
+    background: white;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+    color: black;
+}
+
+.topNavBar-inside {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topNavBar nav {
     padding-top: 8px;
     padding-bottom: 2px
-  }
-  .topNavBar .logo{
-      font-size: 26px;
-      font-family: "Segoe UI Black";
-      padding-top: 2px;
-      padding-bottom: 2px;
-  }
-  .topNavBar .logo .rs{
-      margin-right: 5px;
-      color: #E86767;
-  }
-  .topNavBar .logo .card{
-      color: #9A9DA2;
-  }
-  .topNavBar nav ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-  }
-  .topNavBar>.topNavBar-inside>nav>ul>li{
-      float: left;
-      margin-left: 17px;
-      margin-right: 17px;
-      position: relative;
-  }
-  .topNavBar nav ul>li>a{
-      color: inherit;
-      font-weight: bold;
-      font-size:12px;
-      border-bottom: 3px solid transparent;
-      border-top: 3px solid transparent;
-      padding: 5px 0;
-      display: block;
-      position: relative;
-  }
-  .topNavBar .submenu{
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 100%;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);     
-      color: black;
-      margin-top: 3px;
-  }
-  .topNavBar li.active>.submenu{
-      display: block;
-      animation: submenuSlide .3s;   
-  }
-  @keyframes submenuSlide{
-    0%{
-      margin-right: 100%;
+}
+
+.topNavBar .logo {
+    font-size: 26px;
+    font-family: "Segoe UI Black";
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.topNavBar .logo .rs {
+    margin-right: 5px;
+    color: #E86767;
+}
+
+.topNavBar .logo .card {
+    color: #9A9DA2;
+}
+
+.topNavBar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topNavBar>.topNavBar-inside>nav>ul>li {
+    margin: 0 17px;
+    position: relative;
+}
+
+.topNavBar nav ul>li>a {
+    color: inherit;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding: 5px 0;
+    display: block;
+    position: relative;
+}
+
+.topNavBar .submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+    color: black;
+    margin-top: 3px;
+}
+
+.topNavBar li.active>.submenu {
+    display: block;
+    animation: submenuSlide .3s;
+}
+
+@keyframes submenuSlide {
+    0% {
+        margin-right: 100%;
     }
-    100%{
-      margin-right: 0%;
+    100% {
+        margin-right: 0%;
     }
-  }
-  .topNavBar .submenu > li{
+}
+
+.topNavBar .submenu>li {
     white-space: nowrap;
     padding: 8px 15px;
 }
 
-[data-x].active{
-outline: 10px solid red;
+[data-x].active {
+    outline: 10px solid red;
 }
-[data-x].offset{
-transform: translateY(100px);
+
+[data-x].offset {
+    transform: translateY(100px);
 }
-[data-x]{
-transform: translateY(0);
-transition: all 1s;
+
+[data-x] {
+    transform: translateY(0);
+    transition: all 1s;
 }
-  
+
 .topNavBar nav ul>li.active::after,
-.topNavBar nav ul>li.bright::after{
+.topNavBar nav ul>li.bright::after {
     content: '';
     display: block;
     position: absolute;
@@ -123,263 +143,327 @@ transition: all 1s;
     height: 3px;
     border-radius: 3px;
     animation: widen 0.3s;
-  }
-  @keyframes widen{
-    0%{ width: 0; }
-    100%{ width: 100%; }
-  }
-  .banner{
-      height: 515px;
-      background-image: url(../img/rs-cover.jpg);
-      background-position: center center;
-      background-size: cover;
-  }
-  .banner .mask{
-      height: 515px;
-      background-color: rgba(0,0,0, 0.8);
-  }
-  .MyCard{
-      max-width: 940px;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: #FFFFFF;
-      box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);      
-  }
-  .MyCard .welcome{
-      background: #E86767;
-      color: #FFFEFE;
-      display: inline-block;
-      padding: 4px 15px;
-      line-height:22px; 
-      position: relative;
-  }
-  .MyCard .triangle{
-      display: block;
-      border:8px solid transparent;
-      border-left-color: #E86767;
-      border-top:0px;
-      left: 5px;
-      top: 100%;
-      position:absolute;
-  }
-  .pictureAndtext{
-      padding: 50px;
-  }
-  .MyCard .picture{
-      float: left;
-     
-  }
-  .MyCard .picture>img{
-      width: 299px;
-      height: 347px;
-  }
-  .MyCard .text{
-      float: left;
-      margin-left: 65px;
-      width: 473px;
-  }
-  .MyCard .text h1{
-      margin-top: 27px;
-      margin-bottom: 6px;
-  }
-  .MyCard .text hr{
-      margin: 20px 0
-  }
-  .MyCard dl dt,
-  .MyCard dl dd{
-      float: left;
-      margin: 7px 0;
-  }
-  .MyCard dl dt{
-      width: 30%;
-      font-weight: bold;
-  }
-  .MyCard dl dd{
-      width: 70%;
-      color: #9DA0A7
-  }
-  .MyCard .media{
-      background: #E86767;
-      text-align: center;
-  }
-  .MyCard .media a{
-      display: inline-block;
-      width: 40px;;
-      line-height: 30px;
-      padding: 5px 0;
-      border-radius: 50%;
-      margin: 20px 22px;
-  }
-  .MyCard .media a:hover{
-      background: #D05C5C;
-  }
-  .MyCard svg{
-      width: 30px;
-      height: 30px;
-      fill: white;
-      vertical-align: top;
-  }
-  main{
+}
+
+@keyframes widen {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.banner {
+    height: 515px;
+    background-image: url(../img/rs-cover.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask {
+    height: 515px;
+    background-color: rgba(44, 51, 64, 0.8);
+}
+
+.MyCard {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.MyCard .welcome {
+    background: #E86767;
+    color: #FFFEFE;
+    display: inline-block;
+    padding: 4px 15px;
+    line-height: 22px;
+    position: relative;
+}
+
+.MyCard .triangle {
+    display: block;
+    border: 8px solid transparent;
+    border-left-color: #E86767;
+    border-top: 0px;
+    left: 5px;
+    top: 100%;
+    position: absolute;
+}
+
+.pictureAndtext {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ 
+.MyCard .picture>img {
+    width: 299px;
+    height: 347px;
+}
+
+.MyCard .text {
+    width: 473px;
+}
+
+.MyCard .text h1 {
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+.MyCard .text hr {
+    margin: 20px 0
+}
+
+.MyCard dl dt,
+.MyCard dl dd {
+    margin: 7px 7px;
+}
+
+.MyCard dl {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.MyCard dl dt {
+    width: 30%;
+    font-weight: bold;
+}
+
+.MyCard dl dd {
+    width: 60%;
+    color: #9DA0A7
+}
+
+.MyCard .media {
+    background: #E86767;
+    text-align: center;
+}
+
+.MyCard .media a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 20px 22px;
+}
+
+.MyCard .media a:hover {
+    background: #D05C5C;
+}
+
+.MyCard svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
+}
+
+.introduction {
+    /*自我介绍*/
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 宋体;
+    font-size: 19px;
+    line-height: 1.8;
+    padding: 0 5px;
+    word-break: break-all;
+}
+
+main {
     margin-top: -345px
-  }
-  main .downloadbutton{
+}
+
+main .downloadbutton {
     display: inline-block;
     background: #EFEFEF;
     border: 1px solid #CDCFD1;
     border-radius: 3px;
-    color: #3d4451 ;
+    color: #3d4451;
     font-size: 14px;
     line-height: 16px;
     font-weight: bold;
     padding: 21px 55px;
     margin: 36px auto;
-  }
-  main .downloadbox{
+}
+
+main .downloadbox {
     text-align: center
-    }
-  .downloadbutton:hover{
+}
+
+.downloadbutton:hover {
     transition: box-shadow 0.3s;
-    box-shadow:0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  }
-  .introduction{                  /*自我介绍*/
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: 宋体;
-    font-size: 19px;
-    line-height: 1.8;
-  }
-  ul ,ol{
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+ul,
+ol {
     list-style: none;
-  }
-  section.skills,
-  section.portfolio{
+}
+
+section.skills,
+section.portfolio {
     max-width: 940px;
-    margin:56px auto 0;
+    margin: 56px auto 0;
     text-align: center;
-  }
-  section.skills>h2,
-  section.portfolio>h2,section.message>h2{
+}
+
+section.skills>h2,
+section.portfolio>h2,
+section.message>h2 {
     color: #3D4451;
     font-size: 34px;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 30px;
     margin-top: 76px;
-  }
-  section.skills>ol{
+}
+
+section.skills>ol {
     background-color: #FFFFFF;
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
     padding: 40px 50px 8px;
-  }
-  section.skills > ol > li{
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section.skills>ol>li {
     width: 48.3%;
     box-sizing: border-box;
-  }
-  section.skills > ol > li:nth-child(even){
+}
+
+section.skills>ol>li:nth-child(even) {
     float: right;
-  }
-  section.skills h3{
+}
+
+section.skills h3 {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.1;
-    padding-right: 40px;
-  }
-  section.skills .ProgressBar{         /*技能条*/
+    text-align: left;
+}
+
+section.skills .ProgressBar {
+    /*技能条*/
     background-color: #FAE1E1;
     height: 5px;
     border-radius: 3px;
-    margin:4px 0 40px 0;
+    margin: 4px 0 40px 0;
     overflow: hidden;
-  }
-  section.skills .ProgressBar .Progress{
+}
+
+section.skills .ProgressBar .Progress {
     background-color: #E86767;
     height: 100%;
-    border-radius: 3px  ;
-    transform: translateX(0); transition: all 1s; 
+    border-radius: 3px;
+    transform: translateX(0);
+    transition: all 1s;
 }
-  section.skills.offset .Progress{
-    transform: translateX(-100%);
-  }
 
-  section.portfolio>nav{
+section.skills.offset .Progress {
+    transform: translateX(-100%);
+}
+
+section.portfolio>nav {
     text-align: center;
     display: inline-block;
     vertical-align: top;
-  }
-  section.portfolio>nav>ol{
+}
+
+section.portfolio>nav>ol {
     display: inline-block;
     vertical-align: top;
-  }
-  section.portfolio>nav li{
+}
+
+section.portfolio>nav li {
     float: left;
-    margin-left: 40px;     
+    margin-left: 40px;
     cursor: pointer;
-  }
-  section.portfolio>nav li:nth-child(1){
-      margin-left: 0;
-  }
-  section.portfolio>nav .Bar{
+}
+
+section.portfolio>nav li:nth-child(1) {
+    margin-left: 0;
+}
+
+section.portfolio>nav .Bar {
     height: 5px;
     margin-top: 14px;
     margin-bottom: 28px;
     border-radius: 2px;
     background: #FFFFFF
-    }
-  section.portfolio>nav>.Bar>.BarInner{
+}
+
+section.portfolio>nav>.Bar>.BarInner {
     height: 100%;
     background: #E86767;
     width: 10%;
     border-radius: 2px;
     transition: all 0.5s;
-  }
-  section.portfolio>nav>.Bar.state-1>.BarInner{
+}
+
+section.portfolio>nav>.Bar.state-1>.BarInner {
     margin-left: 0;
     width: 32px;
-  }
-  section.portfolio>nav>.Bar.state-2>.BarInner{
+}
+
+section.portfolio>nav>.Bar.state-2>.BarInner {
     margin-left: 73px;
     width: 32px;
-  }
-  section.portfolio>nav>.Bar.state-3>.BarInner{
+}
+
+section.portfolio>nav>.Bar.state-3>.BarInner {
     margin-left: 144px;
     width: 90px;
-  }
-  section.portfolio .works{
+}
+
+section.portfolio .works {
     height: 430px;
     background: #ccc;
     /* margin-bottom: 50px; */
-  }
+}
+
 
 /* 留言板 */
-section.message{
+
+section.message {
     max-width: 940px;
     margin: 0 auto;
-    
 }
-section.message>.list{
+
+section.message>.list {
     overflow: auto;
     height: 400px;
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25)
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25)
 }
-section.message>h2{
+
+section.message>h2 {
     text-align: center;
 }
-section.message>.list>ul>li{
+
+section.message>.list>ul>li {
     border: 1px solid #ccc;
     position: relative;
     margin: 20px 10px;
     padding: 15px 10px;
 }
-section.message>form{
-    padding:5px;
+
+section.message>form {
+    padding: 5px;
     text-align: center;
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
     margin-bottom: 10px;
 }
-section.message>form>input{
-    padding:10px 50px;
+
+section.message>form>input {
+    padding: 10px 50px;
     margin-left: 20px;
 }
