@@ -461,9 +461,10 @@ section.message>form {
     text-align: center;
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between
 }
 
-section.message>form>input {
+section.message>form>.row>input {
     padding: 10px 50px;
-    margin-left: 20px;
 }
