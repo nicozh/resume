@@ -37,7 +37,7 @@
         setTimer: function (n) {
             var children = this.view.li
             timerId = setInterval(() => {
-                children.eq(n % 3).trigger('click')
+                children.eq(n % 5).trigger('click')
                 n += 1
             }, 3000)
         },

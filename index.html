@@ -56,14 +56,14 @@
           </li>
           <li>
             <a href="#portfolio">作品</a>
-            <ul class="submenu">
+            <!-- <ul class="submenu">
               <li>作品1</li>
               <hr>
               <li>作品2</li>
               <hr>
               <li>作品3</li>
               <hr>
-            </ul>
+            </ul> -->
           </li>
           <li>
             <a href="//gogoing.me">博客</a>
@@ -137,11 +137,12 @@
       </footer>
     </div>
     <p class="downloadbox">
-      <a class="downloadbutton" href="javascript:;">下载PDF简历
+      <a class="downloadbutton" href="./PDF/张洪-前端开发.pdf" download="张洪-前端开发">下载PDF简历
       </a>
     </p>
     <p class="introduction">
-      你好！我叫张洪，前端工程师。掌握HTML&CSS、JavaScript、Ajax、等WEB相关技术；能编写语义化的HTML，模块化的CSS,熟悉常见布局方案；能熟练运用原生js，了解前端面向对象方式编程，了解HTTP协议，熟悉jquery， Vue.js等流行框架
+      你好！我叫张洪，前端工程师。掌握HTML&CSS、JavaScript、Ajax等WEB相关技术；能编写语义化的HTML，模块化的CSS,熟悉常见布局方案,能做出响应式的页面；能熟练运用原生js，熟悉前端MVC设计模式，熟悉jquery，
+      Vue.js等流行框架；了解前端面向对象方式编程，了解HTTP协议，
     </p>
   </main>
   <!-- 技能条 -->
@@ -176,7 +177,7 @@
           </div>
         </div>
       </li>
-      
+
     </ol>
   </section>
   <!-- 作品集 -->
@@ -184,19 +185,33 @@
     <h2>作品集</h2>
     <nav>
       <ol class="tags clearfix">
-        <li id="all">所有</li>
-        <li id="framework">框架</li>
-        <li id="vallina">原生JS&amp;CSS</li>
+        <li id="all" data-v="state-1">云音乐</li>
+        <li id="framework" data-v="state-2">画板</li>
+        <li id="vallina" data-v="state-3">Vue项目</li>
+        <li id="hua" data-v="state-4">网站导航</li>
+        <li id="vue" data-v="state-5">CSS佩奇</li>
       </ol>
-      <div id="portfolioBar" class="Bar state-1">
+      <div id="portfolioBar" class="Bar ">
         <div class="BarInner"></div>
       </div>
     </nav>
     <div class="works">
       <div id='images' class='images'>
-        <img src="./img/drawing.png" alt="">
-        <img src="./img/music.png" alt="">
-        <img src="./img/navigation.png" alt="">
+        <a href="http://gogoing.me/cloud-music" target="_blank">
+          <img width="940" height="430" src="http://lc-dJu77pBG.cn-n1.lcfile.com/20a6391d4ecfa0deeec6.jpg" alt="">
+        </a>
+        <a href="http://gogoing.me/canvas-drawing/index.html" target="_blank">
+          <img width="940" height="430" src="http://lc-dJu77pBG.cn-n1.lcfile.com/5fec947f4288b959daad.jpg" alt="">
+        </a>
+        <a href="http://gogoing.me/resume-editor/src" target="_blank">
+          <img width="940" height="430" src="http://lc-dJu77pBG.cn-n1.lcfile.com/a924f06e5d8072913af2.jpg" alt="">
+        </a>
+        <a href="http://gogoing.me/nav-page/first-edition" target="_blank">
+          <img width="940" height="430" src="http://lc-dJu77pBG.cn-n1.lcfile.com/7d7edcb0a71a9f06ab01.jpg" alt="">
+        </a>
+        <a href="http://gogoing.me/peppa-pig" target="_blank">
+          <img width="940" height="430" src="http://lc-dJu77pBG.cn-n1.lcfile.com/3c1d01e6c8a77d0feee4.jpg" alt="">
+        </a>
       </div>
     </div>
   </section>

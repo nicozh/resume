@@ -412,17 +412,25 @@ section.portfolio>nav>.Bar>.BarInner {
 
 section.portfolio>nav>.Bar.state-1>.BarInner {
     margin-left: 0;
-    width: 32px;
+    width: 11%;
 }
 
 section.portfolio>nav>.Bar.state-2>.BarInner {
-    margin-left: 73px;
-    width: 32px;
+    margin-left: 20%;
+    width: 8%;
 }
 
 section.portfolio>nav>.Bar.state-3>.BarInner {
-    margin-left: 144px;
-    width: 90px;
+    margin-left: 38%;
+    width: 13%;
+}
+section.portfolio>nav>.Bar.state-4>.BarInner {
+    margin-left: 61%;
+    width: 15%;
+}
+section.portfolio>nav>.Bar.state-5>.BarInner {
+    margin-left: 86%;
+    width: 14%;
 }
 
 section.portfolio .works {
