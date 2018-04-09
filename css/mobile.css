@@ -76,6 +76,14 @@ section.portfolio .works {
     /* margin-bottom: 50px; */
 }
 
+section.portfolio .works>.images img{
+    height: 220px;
+    /* margin-bottom: 50px; */
+}
+
+section.portfolio>nav li {
+    margin-left: 5px;
+}
 
 /* 留言板 */
 
